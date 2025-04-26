@@ -1102,6 +1102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d25417bf7315d64f905b640beacd1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheep: {fileID: 5702245026235072465, guid: 27d778bbef0a853478e1d4e1f6b645a4, type: 3}
+  sheep: {fileID: 1862921601913098848, guid: 3a53eb56b4cadea4ea8e6ab979a2cfee, type: 3}
   scoreText: {fileID: 1004276819}
   lives: 0
