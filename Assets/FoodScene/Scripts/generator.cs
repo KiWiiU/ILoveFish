@@ -6,34 +6,47 @@ public class generator : MonoBehaviour
 {
     float timer = 1;
     public GameObject[] gm;
+    public bool run;
     // Start is called before the first frame update
     void Start()
     {
-        
+        run = false;
+        StartCoroutine("StartGame");
+    }
+
+    IEnumerator StartGame() {
+        yield return new WaitForSeconds(5f);
+        run = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (run)
         {
-            timer -= Time.deltaTime;
-        }
-        else 
-        {
-            int chance = Random.Range(1, 101);
-            float pos_x = Random.Range(-4.0f, 4.0f);
-
-            if (chance <= 20) 
+            if (timer > 0)
             {
-                Instantiate(gm[1], new Vector3(pos_x, 6.0f, 0.1f), new Quaternion(0, 0, 0, 0));
-            }
-            else
+                timer -= Time.deltaTime;
+            } 
+            else 
             {
-                Instantiate(gm[0], new Vector3(pos_x, 6.0f, 0.1f), new Quaternion(0, 0, 0, 0));
-            }
+                int chance = Random.Range(1, 101);
+                int type = Random.Range(1, 6);
+                float pos_x = Random.Range(-4.0f, 4.0f);
 
-            timer = 0.7f;
+                if (chance <= 40) 
+                {
+                    GameObject obj = Instantiate(gm[type + 4], new Vector3(pos_x, 6.0f, 0.1f), new Quaternion(0, 0, 0, 0));
+                    obj.transform.localScale *= 1.5f;
+                }
+                else
+                {
+                    GameObject obj = Instantiate(gm[type - 1], new Vector3(pos_x, 6.0f, 0.1f), new Quaternion(0, 0, 0, 0));
+                    obj.transform.localScale *= 1.5f;
+                }
+
+                timer = 0.7f;
+            }
         }
     }
 }

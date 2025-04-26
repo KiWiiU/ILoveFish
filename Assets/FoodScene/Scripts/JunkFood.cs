@@ -25,7 +25,7 @@ public class JunkFood : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "fish")
+        if (collision.gameObject.name == "Herring")
         {
             Destroy(this.gameObject);
             Fish fish = collision.gameObject.GetComponent<Fish>();
