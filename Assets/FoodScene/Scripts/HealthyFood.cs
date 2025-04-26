@@ -26,11 +26,11 @@ public class HealthyFood : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "fish")
+        if (collision.gameObject.name == "Herring")
         {
             Destroy(this.gameObject);
             main.ScoreAdd();
-            collision.gameObject.GetComponent<Fish>().AddHunger(10);
+            collision.gameObject.GetComponent<Fish>().AddHunger(3);
         }
     }
 }
