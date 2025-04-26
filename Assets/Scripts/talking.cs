@@ -9,7 +9,7 @@ public class talking : MonoBehaviour {
     // Start is called before the first frame update
     private float bubblestarttime = -10.0f;
     private float spinning = -5;
-    public TMP_Text text;
+    public TMP_InputField text;
     void Start() {
         bubble1.SetActive(false);
         bubble2.SetActive(false);
@@ -23,7 +23,7 @@ public class talking : MonoBehaviour {
         float currtime = Time.time - bubblestarttime;
         spinning += Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 90+Mathf.Clamp(spinning, 0, 1)*360, 0);
-        if (Random.Range(0f,1f)<0.000001/Time.deltaTime && spinning > 1) {
+        if (Random.Range(0f,1f)<0.0000005/Time.deltaTime && spinning > 1) {
             spinning = 0;
         }
         if (currtime > 0.5) {
@@ -59,7 +59,7 @@ public class talking : MonoBehaviour {
 
     public void OnEndEdit(string s) {
         bubblestarttime = Time.time;
-        
+        text.text="";
     }
 }
 

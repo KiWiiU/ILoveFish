@@ -1089,7 +1089,7 @@ MonoBehaviour:
   bubble3: {fileID: 614152542}
   bubble4: {fileID: 1838208886}
   bubbletext: {fileID: 1457215080}
-  text: {fileID: 1977995156}
+  text: {fileID: 0}
 --- !u!1 &1977995154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1541,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.51189333, b: 0.754717, a: 1}
   m_FlipX: 0
