@@ -1,16 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SheepSpawn : MonoBehaviour
 {
     public GameObject sheep;
-    Vector3 pos = new Vector3(10.53, -4.11, 0);
+    public TMP_Text scoreText;
+    private int score;
+    public int lives;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        Instantiate(sheep, pos);
+        lives = 3;
+        score = 0;
+        MoreSheep();
     }
 
+    public void MoreSheep()
+    {
+        Instantiate(sheep, gameObject.transform);
+    }
+
+    public void Score(int change)
+    {
+        score += change;
+        scoreText.text = score.ToString();
+        if (lives == 0)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+    }
 }
