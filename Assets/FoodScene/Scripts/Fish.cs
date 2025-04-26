@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Fish : MonoBehaviour
 {
 
@@ -67,8 +67,12 @@ public class Fish : MonoBehaviour
 
     // method to switch to main screen after 5 seconds
     IEnumerator Switch2Main() {
-        yield return new WaitForSeconds(5f);
+        Debug.Log("hello");
         //switch
+        // yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("SampleScene");
+        Debug.Log("finished");
+        yield return null;
     }
 
     // method to remove a certain value from the hunger value

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class HealthyFood : MonoBehaviour
 {
+    // variables reference a main object that controls the minigame
     main main;
     Transform tr;
 
+    // Start is called before the first frame update
     void Start()
     {
        tr = GetComponent<Transform>(); 
