@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 12f49406e0580d64c81aa8503a88b370
+  - enabled: 1
+    path: Assets/Scenes/Mindfulness.unity
+    guid: 560065b7eb34d2e4dafe853b61dd29e7
   m_configObjects: {}
